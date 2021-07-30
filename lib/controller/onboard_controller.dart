@@ -8,6 +8,7 @@ import 'package:onboard/views/login_screen.dart';
 class OnboardController extends GetxController {
   var pageContoller = PageController();
   var selectedPageIndex = 0.obs;
+
   bool get isLastPage => selectedPageIndex.value == onboard.length - 1;
 
   forwardAction() {
