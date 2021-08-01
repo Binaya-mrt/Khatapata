@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "961225170412",
+    "project_id": "khatapata-c36da",
+    "storage_bucket": "khatapata-c36da.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:961225170412:android:b1b0046de6abfc000f74c9",
+        "android_client_info": {
+          "package_name": "com.example.onboard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "961225170412-jdrr02aa7769881t9d6oajfs35mrj10n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjSAdUl5KV3sD63m0T4lQhg03YLQX9Uic"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "961225170412-jdrr02aa7769881t9d6oajfs35mrj10n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
