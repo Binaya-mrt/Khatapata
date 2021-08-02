@@ -13,7 +13,7 @@ class OnboardController extends GetxController {
 
   forwardAction() {
     if (isLastPage) {
-      Get.to(AddIncome());
+      Get.to(LoginPage());
     } else {
       pageContoller.nextPage(duration: 3000.milliseconds, curve: Curves.ease);
     }

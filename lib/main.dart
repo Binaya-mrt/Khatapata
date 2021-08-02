@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:onboard/controller/onboard_controller.dart';
@@ -9,7 +10,7 @@ late bool? initscreen;
 final controller = OnboardController();
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  WidgetsFlutterBinding.ensureInitialized();
+  Firebase.initializeApp();
   SharedPreferences preferences = await SharedPreferences.getInstance();
 
   initscreen = (await preferences.getBool('initscreen'));
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      home: initscreen == true ? AddIncome() : OnBoard(),
+      home: initscreen == true ? LoginPage() : OnBoard(),
     );
   }
 }

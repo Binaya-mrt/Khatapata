@@ -54,7 +54,7 @@ class OnBoard extends StatelessWidget {
                       height: 12,
                       decoration: BoxDecoration(
                         color: _controller.selectedPageIndex.value == index
-                            ? Colors.red
+                            ? Colors.teal
                             : Colors.grey,
                         shape: BoxShape.circle,
                       ),
@@ -67,6 +67,7 @@ class OnBoard extends StatelessWidget {
                 bottom: 20,
                 right: 20,
                 child: FloatingActionButton(
+                  backgroundColor: Colors.teal,
                   onPressed: _controller.forwardAction,
                   child: Obx(() =>
                       _controller.isLastPage ? Text('Start') : Text('Next')),

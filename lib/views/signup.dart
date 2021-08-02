@@ -2,16 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:onboard/auth_service/firebase_auth.dart';
-import 'package:onboard/views/signup.dart';
 
-class LoginPage extends StatefulWidget {
-  LoginPage({Key? key}) : super(key: key);
+class SignUp extends StatefulWidget {
+  SignUp({Key? key}) : super(key: key);
 
   @override
-  _LoginPageState createState() => _LoginPageState();
+  _SignUpState createState() => _SignUpState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _SignUpState extends State<SignUp> {
   final _email = TextEditingController();
   final _controller = Get.put(AuthService());
   final _password = TextEditingController();
@@ -70,28 +69,24 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
             ),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                  primary: Colors.teal,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(15),
-                  )),
-              onPressed: () {
-                _controller.userSignin(_email.text.trim(), _email.text.trim());
-              },
-              child: Text(
-                'Sign In',
-                style: TextStyle(fontSize: 25),
-              ),
-            ),
-            TextButton(
+            Card(
+              margin: EdgeInsets.all(16),
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    primary: Colors.teal,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15),
+                    )),
                 onPressed: () {
-                  Get.to(SignUp());
+                  _controller.createUser(
+                      _email.text.trim(), _email.text.trim());
                 },
                 child: Text(
-                  'Not a user? Register',
-                  style: TextStyle(color: Colors.blueGrey, fontSize: 22),
-                ))
+                  'Sign Up',
+                  style: TextStyle(fontSize: 25),
+                ),
+              ),
+            )
           ],
         ),
       ),
